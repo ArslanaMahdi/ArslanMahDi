@@ -139,7 +139,7 @@ COUNTER=1
 
 while(true) do
 echo "]]..'\027[0;32m'..[["
-curl "https://api.telegram.org/bot"$token"/sendmessage" -F
+curl"https://api.telegram.org/bot${TOKEN}/sendmessage" -F "chat_id=${Sudo}" -F "text=THESOURCE-Reloaded-${COUNTER}-times"  -F
 ./TG -s ./inc/BOT.lua $@ --bot=$token
 
 let COUNTER=COUNTER+1 
